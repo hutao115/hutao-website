@@ -1,5 +1,5 @@
 // =============================================
-// 馃寛鑳℃ 涓汉缃戠珯 鈥?涓婚€昏緫
+// 🌈胡桃 个人网站 — 主逻辑
 // =============================================
 
 // ============ DATA LOADING ============
@@ -56,9 +56,9 @@ async function renderProfile() {
 
   const statsRow = document.getElementById('heroStats');
   statsRow.innerHTML = `
-    <div class="hero-stat"><div class="hero-stat-value">${profile.stats.height}cm</div><div class="hero-stat-label">韬珮</div></div>
-    <div class="hero-stat"><div class="hero-stat-value">${profile.stats.weight}鏂?/div><div class="hero-stat-label">浣撻噸</div></div>
-    <div class="hero-stat"><div class="hero-stat-value">${profile.stats.location}</div><div class="hero-stat-label">鍧愭爣</div></div>
+    <div class="hero-stat"><div class="hero-stat-value">${profile.stats.height}cm</div><div class="hero-stat-label">身高</div></div>
+    <div class="hero-stat"><div class="hero-stat-value">${profile.stats.weight}斤</div><div class="hero-stat-label">体重</div></div>
+    <div class="hero-stat"><div class="hero-stat-value">${profile.stats.location}</div><div class="hero-stat-label">坐标</div></div>
   `;
 
   const socialDiv = document.getElementById('socialLinks');
@@ -71,9 +71,9 @@ async function renderProfile() {
 
   const contactDiv = document.getElementById('contactInfo');
   contactDiv.innerHTML = `
-    <h3>馃摤 鑱旂郴鏂瑰紡</h3>
-    <div class="contact-item"><span class="contact-item-icon">馃摟</span> 閭锛?a href="mailto:${profile.contact.email}">${profile.contact.email}</a></div>
-    <div class="contact-item"><span class="contact-item-icon">馃挰</span> 寰俊锛?{profile.contact.wechat}</div>
+    <h3>📬 联系方式</h3>
+    <div class="contact-item"><span class="contact-item-icon">📧</span> 邮箱：<a href="mailto:${profile.contact.email}">${profile.contact.email}</a></div>
+    <div class="contact-item"><span class="contact-item-icon">💬</span> 微信：${profile.contact.wechat}</div>
   `;
 
   document.getElementById('collabNote').textContent = profile.contact.collabNote;
@@ -81,7 +81,7 @@ async function renderProfile() {
 
 // ============ RENDER LOOKBOOK ============
 let allLooks = [];
-let activeStyle = '鍏ㄩ儴';
+let activeStyle = '全部';
 
 async function renderLookbook() {
   const data = await loadJSON('data/lookbook.json');
@@ -90,7 +90,7 @@ async function renderLookbook() {
 
   const filterBar = document.getElementById('filterBar');
   filterBar.innerHTML = data.styles.map(s =>
-    `<button class="filter-btn${s === '鍏ㄩ儴' ? ' active' : ''}" data-style="${s}">${s}</button>`
+    `<button class="filter-btn${s === '全部' ? ' active' : ''}" data-style="${s}">${s}</button>`
   ).join('');
 
   filterBar.querySelectorAll('.filter-btn').forEach(btn => {
@@ -107,12 +107,12 @@ async function renderLookbook() {
 
 function renderLooks() {
   const grid = document.getElementById('lookbookGrid');
-  const filtered = activeStyle === '鍏ㄩ儴' ? allLooks : allLooks.filter(l => l.style === activeStyle);
+  const filtered = activeStyle === '全部' ? allLooks : allLooks.filter(l => l.style === activeStyle);
 
   grid.innerHTML = filtered.map((l, i) => `
     <div class="look-card reveal reveal-d${Math.min(i % 5 + 1, 5)}">
       <img class="look-card-image" src="${l.image}" alt="${l.title}" loading="lazy">
-      <span class="look-card-badge">${l.style} 路 ${l.season}</span>
+      <span class="look-card-badge">${l.style} · ${l.season}</span>
       <div class="look-card-overlay">
         <div class="look-card-title">${l.title}</div>
         <div class="look-card-desc">${l.description}</div>
@@ -134,7 +134,7 @@ async function renderTravel() {
     <div class="travel-card reveal reveal-d${Math.min(i % 5 + 1, 5)}">
       <div class="travel-card-image-wrap">
         <img class="travel-card-image" src="${t.image}" alt="${t.title}" loading="lazy">
-        <span class="travel-card-location">馃搷 ${t.location}</span>
+        <span class="travel-card-location">📍 ${t.location}</span>
       </div>
       <div class="travel-card-body">
         <div class="travel-card-title">${t.title}</div>
@@ -159,11 +159,11 @@ async function renderStats() {
       <div class="stat-card-icon">${p.icon}</div>
       <div class="stat-card-platform">${p.name}</div>
       <div class="stat-card-value">${p.followers}</div>
-      <div class="stat-card-label">绮変笣</div>
+      <div class="stat-card-label">粉丝</div>
       <div class="stat-detail-row">
-        <div class="stat-detail"><div class="stat-detail-val">${p.likes}</div><div class="stat-detail-lbl">鑾疯禐</div></div>
-        <div class="stat-detail"><div class="stat-detail-val">${p.avgViews}</div><div class="stat-detail-lbl">鍧囨挱鏀?/div></div>
-        <div class="stat-detail"><div class="stat-detail-val">${p.engagement}</div><div class="stat-detail-lbl">浜掑姩鐜?/div></div>
+        <div class="stat-detail"><div class="stat-detail-val">${p.likes}</div><div class="stat-detail-lbl">获赞</div></div>
+        <div class="stat-detail"><div class="stat-detail-val">${p.avgViews}</div><div class="stat-detail-lbl">均播放</div></div>
+        <div class="stat-detail"><div class="stat-detail-val">${p.engagement}</div><div class="stat-detail-lbl">互动率</div></div>
       </div>
     </div>
   `).join('');
@@ -171,18 +171,18 @@ async function renderStats() {
   // Brands
   const brandsSection = document.getElementById('brandsSection');
   brandsSection.innerHTML = `
-    <div class="brands-title">馃 鍚堜綔鍝佺墝</div>
-    <div class="brands-grid">${data.brands.map(b => `<span class="brand-tag">${b.name} 路 ${b.type}</span>`).join('')}</div>
+    <div class="brands-title">🤝 合作品牌</div>
+    <div class="brands-grid">${data.brands.map(b => `<span class="brand-tag">${b.name} · ${b.type}</span>`).join('')}</div>
   `;
 
   // Audience
   const audienceSection = document.getElementById('audienceSection');
   audienceSection.innerHTML = `
-    <div class="brands-title">馃懃 绮変笣鐢诲儚</div>
+    <div class="brands-title">👥 粉丝画像</div>
     <div class="audience-row">
-      <div class="audience-chip">馃懇 ${data.audience.femaleRatio} 濂虫€?/div>
-      <div class="audience-chip">馃巶 ${data.audience.ageGroup}</div>
-      ${data.audience.topCities.map(c => `<div class="audience-chip">馃彊锔?${c}</div>`).join('')}
+      <div class="audience-chip">👩 ${data.audience.femaleRatio} 女性</div>
+      <div class="audience-chip">🎂 ${data.audience.ageGroup}</div>
+      ${data.audience.topCities.map(c => `<div class="audience-chip">🏙️ ${c}</div>`).join('')}
     </div>
   `;
 
