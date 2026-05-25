@@ -143,8 +143,8 @@ function renderLooks() {
     const playBtn = card.querySelector('.look-play-btn');
     if (!video) return;
 
-    const play = () => { video.play(); if (playBtn) playBtn.style.opacity = '0'; };
-    const pause = () => { video.pause(); if (playBtn) playBtn.style.opacity = '1'; };
+    const play = () => { const p = video.play(); if (p && p.catch) p.catch(() => {}); if (playBtn) playBtn.style.display = 'none'; };
+    const pause = () => { video.pause(); if (playBtn) playBtn.style.display = ''; };
 
     card.addEventListener('click', (e) => {
       if (e.target.closest('.look-card-tag')) return;
@@ -152,8 +152,8 @@ function renderLooks() {
     });
 
     video.addEventListener('ended', () => pause());
-    video.addEventListener('pause', () => { if (playBtn) playBtn.style.opacity = '1'; });
-    video.addEventListener('play', () => { if (playBtn) playBtn.style.opacity = '0'; });
+    video.addEventListener('pause', () => { if (playBtn) playBtn.style.display = ''; });
+    video.addEventListener('play', () => { if (playBtn) playBtn.style.display = 'none'; });
   });
 
   grid.querySelectorAll('video').forEach(v => {
