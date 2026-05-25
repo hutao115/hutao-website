@@ -1,30 +1,24 @@
-﻿{
-    "trips":  [
-                  {
-                      "id":  1,
-                      "title":  "洛西安古城",
-                      "location":  "陕西·西安",
-                      "date":  "2025-08",
-                      "description":  "十三朝古都的厚重，在青砖灰瓦间低语着华夏千年的辉煌史诗",
-                      "image":  "",
-                      "tags":  [
-                                   "古城",
-                                   "西安",
-                                   "慢生活"
-                               ]
-                  },
-                  {
-                      "id":  2,
-                      "title":  "北京街头穿搭日记",
-                      "location":  "北京",
-                      "date":  "2025-11",
-                      "description":  "‌红墙蓝瓦映天光‌，六百年青砖红柱琉璃顶，随手一拍都是文化自信大片！",
-                      "image":  "",
-                      "tags":  [
-                                   "北京",
-                                   "天坛",
-                                   "街拍"
-                               ]
-                  }
-              ]
+{
+  "trips": [
+    {
+      "id": 1,
+      "title": "来杯好茶",
+      "location": "上海·茶馆",
+      "date": "2025-08",
+      "description": "慢下来的时光，一杯好茶暖到心里",
+      "image": "",
+      "video": "https://player.bilibili.com/player.html?bvid=BV171Gi6aEGK&page=1&autoplay=0",
+      "tags": ["茶道", "慢生活", "治愈"]
+    },
+    {
+      "id": 2,
+      "title": "奇美拉",
+      "location": "上海",
+      "date": "2025-11",
+      "description": "来一杯奶茶，生活就要甜甜的",
+      "image": "",
+      "video": "https://player.bilibili.com/player.html?bvid=BV1q7LM6oEz5&page=1&autoplay=0",
+      "tags": ["奶茶", "日常", "轻松"]
+    }
+  ]
 }
