@@ -1,0 +1,87 @@
+{
+  "looks": [
+    {
+      "id": 1,
+      "title": "澶忔棩濂舵补榛?,
+      "style": "鏃ュ父閫氬嫟",
+      "season": "澶?,
+      "description": "濂舵补榛勮繛琛ｈ + 缂栫粐鍖咃紝娓╂煍鍙堝厓姘?,
+      "image": "https://picsum.photos/seed/hutao1/600/800",
+      "tags": ["杩炶。瑁?, "濂舵补鑹茬郴", "娓╂煍椋?]
+    },
+    {
+      "id": 2,
+      "title": "鍛ㄦ湯鍑鸿鐗涗粩",
+      "style": "浼戦棽",
+      "season": "鏄?,
+      "description": "瀹芥澗鐗涗粩澶栧 + 鐧絋 + 鐧捐ざ瑁欙紝鏍″洯鎰熸弧鍒?,
+      "image": "https://picsum.photos/seed/hutao2/600/800",
+      "tags": ["鐗涗粩", "瀛﹂櫌椋?, "鍑忛緞"]
+    },
+    {
+      "id": 3,
+      "title": "閫氬嫟瑗胯鏂扮┛娉?,
+      "style": "鏃ュ父閫氬嫟",
+      "season": "绉?,
+      "description": "寤撳舰瑗胯 + 鍚婂甫瑁欙紝鍙堥鍙堢敎",
+      "image": "https://picsum.photos/seed/hutao3/600/800",
+      "tags": ["瑗胯", "鐢滈叿", "閫氬嫟"]
+    },
+    {
+      "id": 4,
+      "title": "娴疯竟搴﹀亣椋?,
+      "style": "鏃呰绌挎惌",
+      "season": "澶?,
+      "description": "纰庤姳闀胯 + 鑽夊附 + 鍑夋嫋锛屾捣杈规媿鐓х粷浜?,
+      "image": "https://picsum.photos/seed/hutao4/600/800",
+      "tags": ["搴﹀亣", "纰庤姳", "娴疯竟"]
+    },
+    {
+      "id": 5,
+      "title": "绉嬪啲鍙犵┛澶ф硶",
+      "style": "鏃ュ父閫氬嫟",
+      "season": "鍐?,
+      "description": "楂橀鎵撳簳 + 琛～ + 澶ц。锛屼笁灞傚彔绌夸笉鑷冭偪",
+      "image": "https://picsum.photos/seed/hutao5/600/800",
+      "tags": ["鍙犵┛", "澶ц。", "淇濇殩"]
+    },
+    {
+      "id": 6,
+      "title": "绾︿細灏忓績鏈?,
+      "style": "绾︿細",
+      "season": "鏄?,
+      "description": "閽堢粐寮€琛?+ 纰庤姳鍗婅锛屾俯鏌斿埌楠ㄥ瓙閲?,
+      "image": "https://picsum.photos/seed/hutao6/600/800",
+      "tags": ["绾︿細", "閽堢粐", "鐢滅編"]
+    },
+    {
+      "id": 7,
+      "title": "杩愬姩灏戝コ鎰?,
+      "style": "浼戦棽",
+      "season": "澶?,
+      "description": "oversize 鍗。 + 楠戣瑁?+ 鑰佺埞闉?,
+      "image": "https://picsum.photos/seed/hutao7/600/800",
+      "tags": ["杩愬姩椋?, "鍗。", "琛楀ご"]
+    },
+    {
+      "id": 8,
+      "title": "鏂颁腑寮忕┛鎼?,
+      "style": "绾︿細",
+      "season": "绉?,
+      "description": "鏀硅壇鏃楄涓婅。 + 闃旇吙瑁わ紝涓滄柟缇庣粷浜?,
+      "image": "https://picsum.photos/seed/hutao8/600/800",
+      "tags": ["鏂颁腑寮?, "鏃楄", "涓滄柟缇?]
+    },
+    {
+      "id": 9,
+      "title": "闆北绌挎惌涓嶈噧鑲?,
+      "style": "鏃呰绌挎惌",
+      "season": "鍐?,
+      "description": "鐧借壊缇界粧 + 浜壊鍥村肪锛岄洩鍦伴噷鏈€浜溂鐨勫唇",
+      "image": "https://picsum.photos/seed/hutao9/600/800",
+      "tags": ["婊戦洩", "缇界粧鏈?, "淇濇殩"]
+    }
+  ],
+  "styles": ["鍏ㄩ儴", "鏃ュ父閫氬嫟", "浼戦棽", "绾︿細", "鏃呰绌挎惌"],
+  "seasons": ["鍏ㄩ儴", "鏄?, "澶?, "绉?, "鍐?]
+}
