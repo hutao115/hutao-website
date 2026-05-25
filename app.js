@@ -117,7 +117,7 @@ function renderLooks() {
     const posterSrc = l.image && l.image.trim() !== '' ? l.image : '';
     const posterAttr = posterSrc ? ' poster="' + posterSrc + '"' : '';
     const videoEl = hasVideo
-      ? '<video class="look-card-video" src="' + l.video + '"' + posterAttr + ' preload="metadata" muted loop playsinline></video>'
+      ? '<video class="look-card-video" src="' + l.video + '"' + posterAttr + ' preload="metadata" loop playsinline></video>'
       : (posterSrc ? '<img class="look-card-image" src="' + posterSrc + '" alt="' + l.title + '" loading="lazy">' : '<div class="look-card-placeholder" style="background:' + bgColor + '"><span>' + l.title.charAt(0) + '</span></div>');
     const playBtn = hasVideo ? '<div class="look-play-btn">&#9654;</div>' : '';
     const overlayClass = hasVideo ? 'look-card-overlay look-card-overlay-video' : 'look-card-overlay';
