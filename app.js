@@ -113,18 +113,27 @@ function renderLooks() {
 
   grid.innerHTML = filtered.map((l, i) => {
     const hasVideo = l.video && l.video.trim() !== '';
+    const isBilibili = hasVideo && l.video.includes('bilibili');
     const bgColor = colors[i % colors.length];
     const posterSrc = l.image && l.image.trim() !== '' ? l.image : '';
-    const posterAttr = posterSrc ? ' poster="' + posterSrc + '"' : '';
-    const videoEl = hasVideo
-      ? '<video class="look-card-video" src="' + l.video + '"' + posterAttr + ' preload="metadata" loop playsinline></video>'
-      : (posterSrc ? '<img class="look-card-image" src="' + posterSrc + '" alt="' + l.title + '" loading="lazy">' : '<div class="look-card-placeholder" style="background:' + bgColor + '"><span>' + l.title.charAt(0) + '</span></div>');
-    const playBtn = hasVideo ? '<div class="look-play-btn">&#9654;</div>' : '';
+    let mediaEl;
+    if (hasVideo && isBilibili) {
+      mediaEl = '<iframe class="look-card-video" src="' + l.video + '" frameborder="0" allowfullscreen allow="autoplay; encrypted-media" loading="lazy"></iframe>';
+    } else if (hasVideo) {
+      const posterAttr = posterSrc ? ' poster="' + posterSrc + '"' : '';
+      mediaEl = '<video class="look-card-video" src="' + l.video + '"' + posterAttr + ' preload="metadata" loop playsinline></video>';
+    } else if (posterSrc) {
+      mediaEl = '<img class="look-card-image" src="' + posterSrc + '" alt="' + l.title + '" loading="lazy">';
+    } else {
+      mediaEl = '<div class="look-card-placeholder" style="background:' + bgColor + '"><span>' + l.title.charAt(0) + '</span></div>';
+    }
+    const playBtn = (hasVideo && !isBilibili) ? '<div class="look-play-btn">&#9654;</div>' : '';
     const overlayClass = hasVideo ? 'look-card-overlay look-card-overlay-video' : 'look-card-overlay';
+    const videoAttr = (hasVideo && !isBilibili) ? 'true' : '';
 
     return `
-    <div class="look-card reveal reveal-d${Math.min(i % 5 + 1, 5)}" data-video="${hasVideo ? 'true' : ''}">
-      ${videoEl}
+    <div class="look-card reveal reveal-d${Math.min(i % 5 + 1, 5)}" data-video="${videoAttr}">
+      ${mediaEl}
       ${playBtn}
       <span class="look-card-badge">${l.style} · ${l.season}</span>
       <div class="${overlayClass}">
