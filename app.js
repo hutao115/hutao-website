@@ -109,11 +109,16 @@ function renderLooks() {
   const grid = document.getElementById('lookbookGrid');
   const filtered = activeStyle === '全部' ? allLooks : allLooks.filter(l => l.style === activeStyle);
 
+  const colors = ['#FF6B6B','#FFA94D','#FFD43B','#69DB7C','#74C0FC','#B197FC','#F783AC','#FF8A80','#FFD740'];
+
   grid.innerHTML = filtered.map((l, i) => {
     const hasVideo = l.video && l.video.trim() !== '';
+    const bgColor = colors[i % colors.length];
+    const posterSrc = l.image && l.image.trim() !== '' ? l.image : '';
+    const posterAttr = posterSrc ? ' poster="' + posterSrc + '"' : '';
     const videoEl = hasVideo
-      ? '<video class="look-card-video" src="' + l.video + '" poster="' + l.image + '" preload="metadata" muted loop playsinline></video>'
-      : '<img class="look-card-image" src="' + l.image + '" alt="' + l.title + '" loading="lazy">';
+      ? '<video class="look-card-video" src="' + l.video + '"' + posterAttr + ' preload="metadata" muted loop playsinline></video>'
+      : (posterSrc ? '<img class="look-card-image" src="' + posterSrc + '" alt="' + l.title + '" loading="lazy">' : '<div class="look-card-placeholder" style="background:' + bgColor + '"><span>' + l.title.charAt(0) + '</span></div>');
     const playBtn = hasVideo ? '<div class="look-play-btn">&#9654;</div>' : '';
     const overlayClass = hasVideo ? 'look-card-overlay look-card-overlay-video' : 'look-card-overlay';
 
@@ -166,20 +171,28 @@ async function renderTravel() {
   if (!data) return;
 
   const grid = document.getElementById('travelGrid');
-  grid.innerHTML = data.trips.map((t, i) => `
+  grid.innerHTML = data.trips.map((t, i) => {
+    const imgSrc = t.image && t.image.trim() !== '' ? t.image : '';
+    const travelColors = ['#FF6B6B','#FFA94D','#74C0FC','#69DB7C','#B197FC','#F783AC'];
+    const bg = travelColors[i % travelColors.length];
+    const imageEl = imgSrc
+      ? '<img class="travel-card-image" src="' + imgSrc + '" alt="' + t.title + '" loading="lazy">'
+      : '<div class="travel-card-placeholder" style="background:' + bg + '"><span>' + t.location.replace(/[\u4e00-\u9fa5]+$/, '').slice(-2) + '</span></div>';
+    return `
     <div class="travel-card reveal reveal-d${Math.min(i % 5 + 1, 5)}">
       <div class="travel-card-image-wrap">
-        <img class="travel-card-image" src="${t.image}" alt="${t.title}" loading="lazy">
+        ${imageEl}
         <span class="travel-card-location">📍 ${t.location}</span>
       </div>
       <div class="travel-card-body">
         <div class="travel-card-title">${t.title}</div>
         <div class="travel-card-date">${t.date}</div>
         <div class="travel-card-desc">${t.description}</div>
-        <div class="travel-card-tags">${t.tags.map(tag => `<span class="travel-card-tag">${tag}</span>`).join('')}</div>
+        <div class="travel-card-tags">${t.tags.map(tag => '<span class="travel-card-tag">' + tag + '</span>').join('')}</div>
       </div>
     </div>
-  `).join('');
+  `;
+  }).join('');
 
   observeReveal();
 }
