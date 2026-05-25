@@ -1,10 +1,10 @@
 {
   "videos": [
-    { "title": "涓滀含澶滆壊", "location": "Tokyo, Japan", "file": "tokyo.mp4" },
-    { "title": "鍐板矝鐜矝鏃ヨ", "location": "Iceland", "file": "iceland.mp4" },
-    { "title": "娓呰繄鎱㈢敓娲?, "location": "Chiang Mai, Thailand", "file": "chiangmai.mp4" },
-    { "title": "宸村帢宀涙棩钀?, "location": "Bali, Indonesia", "file": "bali.mp4" },
-    { "title": "宸撮粠琛楀ご", "location": "Paris, France", "file": "paris.mp4" },
-    { "title": "浜兘绾㈠彾", "location": "Kyoto, Japan", "file": "kyoto.mp4" }
+    { "title": "东京夜色", "location": "Tokyo, Japan", "file": "tokyo.mp4" },
+    { "title": "冰岛环岛日记", "location": "Iceland", "file": "iceland.mp4" },
+    { "title": "清迈慢生活", "location": "Chiang Mai, Thailand", "file": "chiangmai.mp4" },
+    { "title": "巴厘岛日落", "location": "Bali, Indonesia", "file": "bali.mp4" },
+    { "title": "巴黎街头", "location": "Paris, France", "file": "paris.mp4" },
+    { "title": "京都红叶", "location": "Kyoto, Japan", "file": "kyoto.mp4" }
   ]
 }
