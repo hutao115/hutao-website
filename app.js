@@ -138,30 +138,39 @@ function renderLooks() {
 
   observeReveal();
 
-  grid.querySelectorAll('.look-card[data-video="true"]').forEach(card => {
+  // Event delegation on grid: handles all video card clicks
+  const videoPlayHandler = (e) => {
+    const card = e.target.closest('.look-card[data-video="true"]');
+    if (!card) return;
+    if (e.target.closest('.look-card-tag')) return;
     const video = card.querySelector('video');
     const playBtn = card.querySelector('.look-play-btn');
     if (!video) return;
+    if (video.paused) {
+      const p = video.play();
+      if (p && p.catch) p.catch(() => {});
+      if (playBtn) playBtn.style.display = 'none';
+      // Pause all other videos
+      grid.querySelectorAll('video').forEach(other => {
+        if (other !== video && !other.paused) other.pause();
+      });
+    } else {
+      video.pause();
+      if (playBtn) playBtn.style.display = '';
+    }
+  };
 
-    const play = () => { const p = video.play(); if (p && p.catch) p.catch(() => {}); if (playBtn) playBtn.style.display = 'none'; };
-    const pause = () => { video.pause(); if (playBtn) playBtn.style.display = ''; };
+  // Remove old listener and re-add (idempotent)
+  if (grid._videoHandler) grid.removeEventListener('click', grid._videoHandler);
+  grid._videoHandler = videoPlayHandler;
+  grid.addEventListener('click', videoPlayHandler);
 
-    card.addEventListener('click', (e) => {
-      if (e.target.closest('.look-card-tag')) return;
-      if (video.paused) { play(); } else { pause(); }
-    });
-
-    video.addEventListener('ended', () => pause());
+  // Bind video ended/pause/play events (these only need to be bound once per render)
+  grid.querySelectorAll('.look-card[data-video="true"] video').forEach(video => {
+    const playBtn = video.closest('.look-card')?.querySelector('.look-play-btn');
+    video.addEventListener('ended', () => { video.pause(); if (playBtn) playBtn.style.display = ''; });
     video.addEventListener('pause', () => { if (playBtn) playBtn.style.display = ''; });
     video.addEventListener('play', () => { if (playBtn) playBtn.style.display = 'none'; });
-  });
-
-  grid.querySelectorAll('video').forEach(v => {
-    v.addEventListener('play', () => {
-      grid.querySelectorAll('video').forEach(other => {
-        if (other !== v && !other.paused) other.pause();
-      });
-    });
   });
 }
 
