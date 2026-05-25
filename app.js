@@ -4,7 +4,7 @@
 
 // ============ DATA LOADING ============
 async function loadJSON(path) {
-  try { const r = await fetch(path); if (r.ok) return r.json(); } catch(e) {}
+  try { const r = await fetch(path, { cache: 'no-store' }); if (r.ok) return r.json(); } catch(e) {}
   return null;
 }
 
