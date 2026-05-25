@@ -2,86 +2,86 @@
   "looks": [
     {
       "id": 1,
-      "title": "澶忔棩濂舵补榛?,
-      "style": "鏃ュ父閫氬嫟",
-      "season": "澶?,
-      "description": "濂舵补榛勮繛琛ｈ + 缂栫粐鍖咃紝娓╂煍鍙堝厓姘?,
+      "title": "夏日奶油黄",
+      "style": "日常通勤",
+      "season": "夏",
+      "description": "奶油黄连衣裙 + 编织包，温柔又元气",
       "image": "https://picsum.photos/seed/hutao1/600/800",
-      "tags": ["杩炶。瑁?, "濂舵补鑹茬郴", "娓╂煍椋?]
+      "tags": ["连衣裙", "奶油色系", "温柔风"]
     },
     {
       "id": 2,
-      "title": "鍛ㄦ湯鍑鸿鐗涗粩",
-      "style": "浼戦棽",
-      "season": "鏄?,
-      "description": "瀹芥澗鐗涗粩澶栧 + 鐧絋 + 鐧捐ざ瑁欙紝鏍″洯鎰熸弧鍒?,
+      "title": "周末出街牛仔",
+      "style": "休闲",
+      "season": "春",
+      "description": "宽松牛仔外套 + 白T + 百褶裙，校园感满分",
       "image": "https://picsum.photos/seed/hutao2/600/800",
-      "tags": ["鐗涗粩", "瀛﹂櫌椋?, "鍑忛緞"]
+      "tags": ["牛仔", "学院风", "减龄"]
     },
     {
       "id": 3,
-      "title": "閫氬嫟瑗胯鏂扮┛娉?,
-      "style": "鏃ュ父閫氬嫟",
-      "season": "绉?,
-      "description": "寤撳舰瑗胯 + 鍚婂甫瑁欙紝鍙堥鍙堢敎",
+      "title": "通勤西装新穿法",
+      "style": "日常通勤",
+      "season": "秋",
+      "description": "廓形西装 + 吊带裙，又飒又甜",
       "image": "https://picsum.photos/seed/hutao3/600/800",
-      "tags": ["瑗胯", "鐢滈叿", "閫氬嫟"]
+      "tags": ["西装", "甜酷", "通勤"]
     },
     {
       "id": 4,
-      "title": "娴疯竟搴﹀亣椋?,
-      "style": "鏃呰绌挎惌",
-      "season": "澶?,
-      "description": "纰庤姳闀胯 + 鑽夊附 + 鍑夋嫋锛屾捣杈规媿鐓х粷浜?,
+      "title": "海边度假风",
+      "style": "旅行穿搭",
+      "season": "夏",
+      "description": "碎花长裙 + 草帽 + 凉拖，海边拍照绝了",
       "image": "https://picsum.photos/seed/hutao4/600/800",
-      "tags": ["搴﹀亣", "纰庤姳", "娴疯竟"]
+      "tags": ["度假", "碎花", "海边"]
     },
     {
       "id": 5,
-      "title": "绉嬪啲鍙犵┛澶ф硶",
-      "style": "鏃ュ父閫氬嫟",
-      "season": "鍐?,
-      "description": "楂橀鎵撳簳 + 琛～ + 澶ц。锛屼笁灞傚彔绌夸笉鑷冭偪",
+      "title": "秋冬叠穿大法",
+      "style": "日常通勤",
+      "season": "冬",
+      "description": "高领打底 + 衬衫 + 大衣，三层叠穿不臃肿",
       "image": "https://picsum.photos/seed/hutao5/600/800",
-      "tags": ["鍙犵┛", "澶ц。", "淇濇殩"]
+      "tags": ["叠穿", "大衣", "保暖"]
     },
     {
       "id": 6,
-      "title": "绾︿細灏忓績鏈?,
-      "style": "绾︿細",
-      "season": "鏄?,
-      "description": "閽堢粐寮€琛?+ 纰庤姳鍗婅锛屾俯鏌斿埌楠ㄥ瓙閲?,
+      "title": "约会小心机",
+      "style": "约会",
+      "season": "春",
+      "description": "针织开衫 + 碎花半裙，温柔到骨子里",
       "image": "https://picsum.photos/seed/hutao6/600/800",
-      "tags": ["绾︿細", "閽堢粐", "鐢滅編"]
+      "tags": ["约会", "针织", "甜美"]
     },
     {
       "id": 7,
-      "title": "杩愬姩灏戝コ鎰?,
-      "style": "浼戦棽",
-      "season": "澶?,
-      "description": "oversize 鍗。 + 楠戣瑁?+ 鑰佺埞闉?,
+      "title": "运动少女感",
+      "style": "休闲",
+      "season": "夏",
+      "description": "oversize 卫衣 + 骑行裤 + 老爹鞋",
       "image": "https://picsum.photos/seed/hutao7/600/800",
-      "tags": ["杩愬姩椋?, "鍗。", "琛楀ご"]
+      "tags": ["运动风", "卫衣", "街头"]
     },
     {
       "id": 8,
-      "title": "鏂颁腑寮忕┛鎼?,
-      "style": "绾︿細",
-      "season": "绉?,
-      "description": "鏀硅壇鏃楄涓婅。 + 闃旇吙瑁わ紝涓滄柟缇庣粷浜?,
+      "title": "新中式穿搭",
+      "style": "约会",
+      "season": "秋",
+      "description": "改良旗袍上衣 + 阔腿裤，东方美绝了",
       "image": "https://picsum.photos/seed/hutao8/600/800",
-      "tags": ["鏂颁腑寮?, "鏃楄", "涓滄柟缇?]
+      "tags": ["新中式", "旗袍", "东方美"]
     },
     {
       "id": 9,
-      "title": "闆北绌挎惌涓嶈噧鑲?,
-      "style": "鏃呰绌挎惌",
-      "season": "鍐?,
-      "description": "鐧借壊缇界粧 + 浜壊鍥村肪锛岄洩鍦伴噷鏈€浜溂鐨勫唇",
+      "title": "雪山穿搭不臃肿",
+      "style": "旅行穿搭",
+      "season": "冬",
+      "description": "白色羽绒 + 亮色围巾，雪地里最亮眼的崽",
       "image": "https://picsum.photos/seed/hutao9/600/800",
-      "tags": ["婊戦洩", "缇界粧鏈?, "淇濇殩"]
+      "tags": ["滑雪", "羽绒服", "保暖"]
     }
   ],
-  "styles": ["鍏ㄩ儴", "鏃ュ父閫氬嫟", "浼戦棽", "绾︿細", "鏃呰绌挎惌"],
-  "seasons": ["鍏ㄩ儴", "鏄?, "澶?, "绉?, "鍐?]
+  "styles": ["全部", "日常通勤", "休闲", "约会", "旅行穿搭"],
+  "seasons": ["全部", "春", "夏", "秋", "冬"]
 }
