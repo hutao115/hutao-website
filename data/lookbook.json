@@ -2,13 +2,13 @@
   "looks": [
     {
       "id": 1,
-      "title": "夏日奶油黄",
-      "style": "日常通勤",
+      "title": "夏日",
+      "style": "日常",
       "season": "夏",
-      "description": "奶油黄连衣裙 + 编织包，温柔又元气",
+      "description": "包臀裙 + 编织包，温柔又元气",
       "image": "https://picsum.photos/seed/hutao1/600/800",
-      "video": "",
-      "tags": ["连衣裙", "奶油色系", "温柔风"]
+      "video": "videos/ootd-summer.mp4",
+      "tags": ["包臀裙", "自然色系", "温柔风"]
     },
     {
       "id": 2,
@@ -91,6 +91,6 @@
       "tags": ["滑雪", "羽绒服", "保暖"]
     }
   ],
-  "styles": ["全部", "日常通勤", "休闲", "约会", "旅行穿搭"],
+  "styles": ["全部", "日常", "休闲", "约会", "旅行穿搭"],
   "seasons": ["全部", "春", "夏", "秋", "冬"]
 }
