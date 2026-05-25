@@ -7,6 +7,7 @@
       "season": "夏",
       "description": "奶油黄连衣裙 + 编织包，温柔又元气",
       "image": "https://picsum.photos/seed/hutao1/600/800",
+      "video": "",
       "tags": ["连衣裙", "奶油色系", "温柔风"]
     },
     {
@@ -16,6 +17,7 @@
       "season": "春",
       "description": "宽松牛仔外套 + 白T + 百褶裙，校园感满分",
       "image": "https://picsum.photos/seed/hutao2/600/800",
+      "video": "",
       "tags": ["牛仔", "学院风", "减龄"]
     },
     {
@@ -25,6 +27,7 @@
       "season": "秋",
       "description": "廓形西装 + 吊带裙，又飒又甜",
       "image": "https://picsum.photos/seed/hutao3/600/800",
+      "video": "",
       "tags": ["西装", "甜酷", "通勤"]
     },
     {
@@ -34,6 +37,7 @@
       "season": "夏",
       "description": "碎花长裙 + 草帽 + 凉拖，海边拍照绝了",
       "image": "https://picsum.photos/seed/hutao4/600/800",
+      "video": "",
       "tags": ["度假", "碎花", "海边"]
     },
     {
@@ -43,6 +47,7 @@
       "season": "冬",
       "description": "高领打底 + 衬衫 + 大衣，三层叠穿不臃肿",
       "image": "https://picsum.photos/seed/hutao5/600/800",
+      "video": "",
       "tags": ["叠穿", "大衣", "保暖"]
     },
     {
@@ -52,6 +57,7 @@
       "season": "春",
       "description": "针织开衫 + 碎花半裙，温柔到骨子里",
       "image": "https://picsum.photos/seed/hutao6/600/800",
+      "video": "",
       "tags": ["约会", "针织", "甜美"]
     },
     {
@@ -61,6 +67,7 @@
       "season": "夏",
       "description": "oversize 卫衣 + 骑行裤 + 老爹鞋",
       "image": "https://picsum.photos/seed/hutao7/600/800",
+      "video": "",
       "tags": ["运动风", "卫衣", "街头"]
     },
     {
@@ -70,6 +77,7 @@
       "season": "秋",
       "description": "改良旗袍上衣 + 阔腿裤，东方美绝了",
       "image": "https://picsum.photos/seed/hutao8/600/800",
+      "video": "",
       "tags": ["新中式", "旗袍", "东方美"]
     },
     {
@@ -79,6 +87,7 @@
       "season": "冬",
       "description": "白色羽绒 + 亮色围巾，雪地里最亮眼的崽",
       "image": "https://picsum.photos/seed/hutao9/600/800",
+      "video": "",
       "tags": ["滑雪", "羽绒服", "保暖"]
     }
   ],
