@@ -182,13 +182,17 @@ async function renderTravel() {
   const grid = document.getElementById('travelGrid');
   grid.innerHTML = data.trips.map((t, i) => {
     const imgSrc = t.image && t.image.trim() !== '' ? t.image : '';
+    const videoSrc = t.video && t.video.trim() !== '' ? t.video : '';
     const travelColors = ['#FF6B6B','#FFA94D','#74C0FC','#69DB7C','#B197FC','#F783AC'];
     const bg = travelColors[i % travelColors.length];
     const imageEl = imgSrc
       ? '<img class="travel-card-image" src="' + imgSrc + '" alt="' + t.title + '" loading="lazy">'
-      : '<div class="travel-card-placeholder" style="background:' + bg + '"><span>' + t.location.replace(/[\u4e00-\u9fa5]+$/, '').slice(-2) + '</span></div>';
+      : (videoSrc 
+        ? '<iframe class="travel-card-video" src="' + videoSrc + '" frameborder="0" allowfullscreen allow="autoplay; encrypted-media" loading="lazy"></iframe>'
+        : '<div class="travel-card-placeholder" style="background:' + bg + '"><span>' + t.location.replace(/[\u4e00-\u9fa5]+$/, '').slice(-2) + '</span></div>');
+    const hasVideo = !!videoSrc;
     return `
-    <div class="travel-card reveal reveal-d${Math.min(i % 5 + 1, 5)}">
+    <div class="travel-card reveal reveal-d${Math.min(i % 5 + 1, 5)}" data-has-video="${hasVideo}">
       <div class="travel-card-image-wrap">
         ${imageEl}
         <span class="travel-card-location">📍 ${t.location}</span>
